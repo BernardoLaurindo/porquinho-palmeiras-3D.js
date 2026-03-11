@@ -14,7 +14,6 @@ document.querySelector('svg').addEventListener('click', () => {
 
   pig.classList.add('stop');
 
-  // esconde camisa inteira, mostra as metades
   shirtFull.style.visibility = 'hidden';
   shirtLeft.setAttribute('visibility', 'visible');
   shirtRight.setAttribute('visibility', 'visible');

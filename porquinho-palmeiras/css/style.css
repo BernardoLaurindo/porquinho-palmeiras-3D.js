@@ -14,7 +14,6 @@ p { margin-bottom: 12px; color: #aaffaa; font-size: 1rem; }
 
 svg { cursor: pointer; overflow: visible; }
 
-/* idle sway */
 #pig { animation: sway 2.5s ease-in-out infinite; transform-origin: 160px 280px; }
 @keyframes sway {
   0%,100% { transform: rotate(0deg); }
@@ -23,7 +22,6 @@ svg { cursor: pointer; overflow: visible; }
 }
 #pig.stop { animation: none; }
 
-/* shirt rip */
 #shirt-left  { transform-origin: 160px 210px; }
 #shirt-right { transform-origin: 160px 210px; }
 #shirt-left.rip  { animation: flyLeft  0.5s ease-in forwards; }
@@ -31,26 +29,22 @@ svg { cursor: pointer; overflow: visible; }
 @keyframes flyLeft  { to { transform: translate(-130px,-60px) rotate(-40deg); opacity:0; } }
 @keyframes flyRight { to { transform: translate( 130px,-60px) rotate( 40deg); opacity:0; } }
 
-/* arms celebrate */
 #arm-left  { transform-origin: 86px 195px; }
 #arm-right { transform-origin: 234px 195px; }
 #arm-left.celebrate  { animation: armWave 0.35s ease 0.5s 3 alternate; }
 #arm-right.celebrate { animation: armWave 0.35s ease 0.5s 3 alternate; }
 @keyframes armWave { 0%{transform:rotate(0deg)} 100%{transform:rotate(-15deg)} }
 
-/* escudo pop */
 #escudo { opacity:0; transform-origin: 160px 215px; transform: scale(0); }
 #escudo.show { animation: pop 0.4s cubic-bezier(0.34,1.56,0.64,1) 0.35s forwards; }
 @keyframes pop { to { opacity:1; transform: scale(1); } }
 
-/* bounce after reveal */
 #pig.bounce { animation: bounce 0.5s ease 0.5s 2; transform-origin: 160px 280px; }
 @keyframes bounce {
   0%,100% { transform: translateY(0); }
   50%     { transform: translateY(-18px); }
 }
 
-/* spark particle */
 @keyframes spark {
   0%   { opacity:1; transform:translate(0,0) scale(1); }
   100% { opacity:0; transform:translate(var(--dx),var(--dy)) scale(0); }
