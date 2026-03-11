@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Porquinho Palmeiras</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<p id="hint">Clique no porquinho! 🐷</p>
+
+<svg width="320" height="370" viewBox="0 0 320 370">
+  <defs>
+    <radialGradient id="bG" cx="42%" cy="38%" r="60%">
+      <stop offset="0%" stop-color="#ffd0da"/>
+      <stop offset="100%" stop-color="#f090a0"/>
+    </radialGradient>
+    <radialGradient id="sG" cx="40%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#009933"/>
+      <stop offset="100%" stop-color="#004d1a"/>
+    </radialGradient>
+    <radialGradient id="eG" cx="50%" cy="38%" r="58%">
+      <stop offset="0%" stop-color="#00aa44"/>
+      <stop offset="100%" stop-color="#004d1a"/>
+    </radialGradient>
+    <clipPath id="cL"><rect x="0"   y="0" width="160" height="370"/></clipPath>
+    <clipPath id="cR"><rect x="160" y="0" width="160" height="370"/></clipPath>
+    <filter id="sh"><feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#00000044"/></filter>
+  </defs>
+
+  <g id="pig">
+
+    <!-- shadow -->
+    <ellipse cx="160" cy="358" rx="70" ry="10" fill="#00000033"/>
+
+    <!-- LEGS -->
+    <rect x="110" y="285" width="34" height="58" rx="14" fill="#f090a0"/>
+    <rect x="176" y="285" width="34" height="58" rx="14" fill="#f090a0"/>
+
+    <!-- TAIL -->
+    <path d="M228 218 Q256 200 250 182 Q244 166 230 174"
+          fill="none" stroke="#f090a0" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- BODY -->
+    <ellipse cx="160" cy="228" rx="98" ry="82" fill="url(#bG)" filter="url(#sh)"/>
+    <!-- belly -->
+    <ellipse cx="160" cy="238" rx="44" ry="36" fill="#ffe0e8" opacity="0.5"/>
+
+    <!-- ARM LEFT -->
+    <g id="arm-left">
+      <rect x="55" y="148" width="32" height="72" rx="15" fill="#f090a0" transform="rotate(-30,71,184)"/>
+    </g>
+    <!-- ARM RIGHT -->
+    <g id="arm-right">
+      <rect x="233" y="148" width="32" height="72" rx="15" fill="#f090a0" transform="rotate(30,249,184)"/>
+    </g>
+
+    <!-- SHIRT FULL -->
+    <g id="shirt-full">
+      <ellipse cx="160" cy="226" rx="100" ry="84" fill="url(#sG)"/>
+      <path d="M136 162 Q160 182 184 162" fill="none" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <rect x="52"  y="145" width="36" height="60" rx="15" fill="url(#sG)" transform="rotate(-30,70,175)"/>
+      <rect x="232" y="145" width="36" height="60" rx="15" fill="url(#sG)" transform="rotate(30,250,175)"/>
+      <rect x="52"  y="145" width="36" height="12" rx="6" fill="#ffffff44" transform="rotate(-30,70,175)"/>
+      <rect x="232" y="145" width="36" height="12" rx="6" fill="#ffffff44" transform="rotate(30,250,175)"/>
+      <text x="160" y="255" text-anchor="middle" fill="#ffffffdd"
+            font-size="44" font-family="Arial" font-weight="bold">10</text>
+    </g>
+
+    <!-- SHIRT LEFT half (rip) -->
+    <g id="shirt-left" visibility="hidden">
+      <ellipse cx="160" cy="226" rx="100" ry="84" fill="url(#sG)" clip-path="url(#cL)"/>
+      <path d="M136 162 Q148 174 160 168" fill="none" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <rect x="52" y="145" width="36" height="60" rx="15" fill="url(#sG)" transform="rotate(-30,70,175)"/>
+      <rect x="52" y="145" width="36" height="12" rx="6" fill="#ffffff44" transform="rotate(-30,70,175)"/>
+      <polyline points="160,152 154,192 162,228 152,268 160,305"
+                fill="none" stroke="#003312" stroke-width="2" stroke-dasharray="4,3"/>
+    </g>
+
+    <!-- SHIRT RIGHT half (rip) -->
+    <g id="shirt-right" visibility="hidden">
+      <ellipse cx="160" cy="226" rx="100" ry="84" fill="url(#sG)" clip-path="url(#cR)"/>
+      <path d="M160 168 Q172 174 184 162" fill="none" stroke="white" stroke-width="7" stroke-linecap="round"/>
+      <rect x="232" y="145" width="36" height="60" rx="15" fill="url(#sG)" transform="rotate(30,250,175)"/>
+      <rect x="232" y="145" width="36" height="12" rx="6" fill="#ffffff44" transform="rotate(30,250,175)"/>
+      <polyline points="160,152 166,192 158,228 168,268 160,305"
+                fill="none" stroke="#003312" stroke-width="2" stroke-dasharray="4,3"/>
+    </g>
+
+    <!-- ESCUDO PALMEIRAS - coloque o PNG na pasta img/escudo.png -->
+    <g id="escudo">
+      <image href="img/escudo.png" x="60" y="152" width="200" height="210"/>
+    </g>
+
+    <!-- HEAD -->
+    <ellipse cx="160" cy="110" rx="74" ry="70" fill="url(#bG)" filter="url(#sh)"/>
+
+    <!-- ears -->
+    <ellipse cx="101" cy="64"  rx="25" ry="32" fill="#f090a0" transform="rotate(-12,101,64)"/>
+    <ellipse cx="101" cy="64"  rx="14" ry="20" fill="#ffc0cc" transform="rotate(-12,101,64)"/>
+    <ellipse cx="219" cy="64"  rx="25" ry="32" fill="#f090a0" transform="rotate(12,219,64)"/>
+    <ellipse cx="219" cy="64"  rx="14" ry="20" fill="#ffc0cc" transform="rotate(12,219,64)"/>
+
+    <!-- eyes -->
+    <circle cx="135" cy="102" r="14" fill="white"/>
+    <circle cx="185" cy="102" r="14" fill="white"/>
+    <circle cx="138" cy="104" r="8"  fill="#222"/>
+    <circle cx="188" cy="104" r="8"  fill="#222"/>
+    <circle cx="140" cy="101" r="3.5" fill="white"/>
+    <circle cx="190" cy="101" r="3.5" fill="white"/>
+
+    <!-- snout -->
+    <ellipse cx="160" cy="132" rx="32" ry="23" fill="#f090a0"/>
+    <circle cx="150" cy="133" r="8" fill="#c06070" opacity="0.75"/>
+    <circle cx="170" cy="133" r="8" fill="#c06070" opacity="0.75"/>
+
+    <!-- smile -->
+    <path d="M144 148 Q160 160 176 148" fill="none" stroke="#c06070" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- blush -->
+    <ellipse cx="106" cy="122" rx="18" ry="11" fill="#ff8090" opacity="0.28"/>
+    <ellipse cx="214" cy="122" rx="18" ry="11" fill="#ff8090" opacity="0.28"/>
+
+  </g>
+</svg>
+
+<div id="reaction">💚 Avanti Palestra! 💚</div>
+<button id="btn" onclick="resetar()">↺ De novo</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
