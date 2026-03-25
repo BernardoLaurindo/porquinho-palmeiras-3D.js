@@ -14,6 +14,10 @@ document.querySelector('svg').addEventListener('click', () => {
 
   pig.classList.add('stop');
 
+  d3.select('body')
+    .transition().duration(600).ease(d3.easeCubicOut)
+    .style('background', '#0d5c2a');
+
   shirtFull.style.visibility = 'hidden';
   shirtLeft.setAttribute('visibility', 'visible');
   shirtRight.setAttribute('visibility', 'visible');
@@ -89,4 +93,8 @@ function resetar() {
   document.getElementById('btn').style.display = 'none';
   document.getElementById('hint').textContent = 'Clique no porquinho! 🐷';
   document.getElementById('hint').style.color = '#aaffaa';
+
+  d3.select('body')
+    .transition().duration(800).ease(d3.easeCubicInOut)
+    .style('background', '#1a3a1a');
 }
